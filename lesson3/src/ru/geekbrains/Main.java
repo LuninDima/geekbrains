@@ -9,15 +9,16 @@ public class Main {
     public static void main(String[] args) {
 
         gameGuessTheNumber();
-
+        scanner.close();
     }
 
     public static void gameGuessTheNumber() {
 
         Random random = new Random();
         int randomNumber;
+        int randomNumberMax = 3;
         int userAttempt = 3;
-        int userNumber = 0;
+        int userNumber;
         String GameIf = "угадайте число от 0 до 9. У вас есть 3 попытки";
         String WinMessage = "Поздравляем! вы Угадали!";
         String NumberLess = "Указанное вами число меньше загаданного";
@@ -26,7 +27,7 @@ public class Main {
         String isRepeatGameText = "Повторить игру еще раз? 1 – да / 0 – нет";
         int repeatAnswer = 1;
         while (repeatAnswer == 1) {
-            randomNumber = random.nextInt(9);
+            randomNumber = random.nextInt(randomNumberMax);
             System.out.println(GameIf);
             for (int i = 1; i <= userAttempt; i++) {
                 userNumber = scanner.nextInt();
