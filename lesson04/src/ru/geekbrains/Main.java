@@ -27,12 +27,12 @@ public class Main {
                System.out.println("Ничья");
                break;
            }
-           ComputerTurn();
-           printMap();
-           if(checkWin(dotO)){
-               System.out.println("Компьютер победил");
-               break;
-           }
+//           ComputerTurn();
+//           printMap();
+//           if(checkWin(dotO)){
+//               System.out.println("Компьютер победил");
+//               break;
+//           }
            if(isMapFull()){
                System.out.println("Ничья");
            }
