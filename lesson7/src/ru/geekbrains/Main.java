@@ -1,7 +1,9 @@
 package ru.geekbrains;
 
-public class Main {
+import java.io.Console;
+import java.util.Scanner;
 
+public class Main {
     public static void main(String[] args) {
         Cat cat = new Cat("Barsik", 10, false);
         Cat[] arrayCat = new Cat[5];
@@ -11,19 +13,25 @@ public class Main {
         arrayCat[3] = new Cat("Oleg", 10, false);
         arrayCat[4] = new Cat("Danil", 10, false);
 
-        Plate plate = new Plate(100);
+        Plate plate = new Plate(addFoodConsole());
         for (int i = 0; i < arrayCat.length; i++) {
             if (!arrayCat[i].satiety) {
-                if (plate.food > arrayCat[i].appetite) {
+                if (plate.food >= arrayCat[i].appetite) {
                     arrayCat[i].eat(plate);
                     System.out.print(arrayCat[i].name + " поел. ");
                     plate.info();
                 } else
-                    System.out.println("В тарелке недостаточно еды, чтобы покормить кота Необходимо " + cat.appetite + " , а в тарелке: " + plate.food);
+                    System.out.println("В тарелке недостаточно еды, чтобы покормить кота " + arrayCat[i].name + " Необходимо " + cat.appetite + " , а в тарелке: " + plate.food);
             } else System.out.println("Кот уже сыт");
         }
 
 
     }
 
+    public static int addFoodConsole() {
+        Scanner console = new Scanner(System.in);
+        System.out.println("Введите количество еды, которое нужно добавить в тарелку:");
+        int addFood = console.nextInt();
+        return addFood;
+    }
 }
