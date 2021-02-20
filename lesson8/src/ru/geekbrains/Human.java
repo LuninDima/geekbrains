@@ -11,8 +11,8 @@ public class Human {
         this.jump = jump;
     }
 
-    public void Running(String name, int distanceRun, int jumpHigh) {
+    public void Running() {
         Treadmill.Running(name, distanceRun);
-        Wall.Jumping(name, jumpHigh);
+        Wall.Jumping(name, jump);
     }
 }
