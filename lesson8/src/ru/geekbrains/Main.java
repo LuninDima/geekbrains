@@ -3,6 +3,11 @@ package ru.geekbrains;
 public class Main {
 
     public static void main(String[] args) {
+
+
+
+
+/*
         Cat[] arrayCat = new Cat[5];
         arrayCat[0] = new Cat("Barsik", 12, 2);
         arrayCat[1] = new Cat("Ivan", 11, 1);
@@ -35,8 +40,9 @@ public class Main {
             arrayRobot[i].Running();
         }
 
+*/
 
-        };
+        }
 
 
 
