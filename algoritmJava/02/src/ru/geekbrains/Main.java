@@ -52,12 +52,12 @@ public class Main {
         arrays400ElementsCopyChoiche = Arrays.copyOf(arrays400Elements, arrays400Elements.length);
         arrays400ElementsCopyInsert = Arrays.copyOf(arrays400Elements, arrays400Elements.length);
 
-        long timerStart3 = System.nanoTime();
+        long timerStartSort = System.nanoTime();
         Arrays.sort(arrays400Elements);
         System.out.println(Arrays.toString(arrays400Elements));
-        long timerEnd3 = System.nanoTime();
-        long timer3 = (timerEnd3 - timerStart3);
-        System.out.println("Время выполнения кода в нс: " + timer3);
+        long timerEndSort = System.nanoTime();
+        long timerSort = timerEndSort - timerStartSort;
+        System.out.println("Время выполнения кода в нс: " + timerSort);
 
         BubbleSortArray array = new BubbleSortArray(arrays400ElementsCopy.length);
         for (int i = 0; i < arrays400Elements.length; i++) {
@@ -66,30 +66,35 @@ public class Main {
         System.out.println("Вывод неотсортированного массива: ");
         array.printer();
         System.out.println("Вывод отсортированного массива методом пузырьковой сортировки: ");
-        long timerStart4 = System.nanoTime();
+        long timerStartBurble = System.nanoTime();
         array.bubbleSorted();
         array.printer();
-        long timerEnd4 = System.nanoTime();
-        long timer4 = (timerEnd4 - timerStart4);
-        System.out.println("Время выполнения кода в нс: " + timer4);
+        long timerEndBurble = System.nanoTime();
+        long timerBurble = (timerEndBurble - timerStartBurble);
+        System.out.println("Время выполнения кода в нс: " + timerBurble);
 
         System.out.println("Вывод неотсортированного массива: ");
         System.out.println(Arrays.toString(arrays400ElementsCopyChoiche));
         System.out.println("Вывод отсортированного массива методом выбора: ");
-        long timerStart5 = System.nanoTime();
+        long timerStartChoiche = System.nanoTime();
         choicheSortArray(arrays400ElementsCopyChoiche);
-        long timerEnd5 = System.nanoTime();
-        long timer5 = (timerEnd5 - timerStart5);
-        System.out.println("Время выполнения кода в нс: " + timer5);
+        long timerEndChoiche = System.nanoTime();
+        long timerChoiche = (timerEndChoiche - timerStartChoiche);
+        System.out.println("Время выполнения кода в нс: " + timerChoiche);
 
         System.out.println("Вывод неотсортированного массива: ");
         System.out.println(Arrays.toString(arrays400ElementsCopyInsert));
         System.out.println("Вывод отсортированного массива методом вставки: ");
-        long timerStart6 = System.nanoTime();
+        long timerStartInsert = System.nanoTime();
         inserSortArray(arrays400ElementsCopyInsert);
-        long timerEnd6 = System.nanoTime();
-        long timer6 = (timerEnd6 - timerStart6);
-        System.out.println("Время выполнения кода в нс: " + timer6);
+        long timerEndInsert = System.nanoTime();
+        long timerInsert = (timerEndInsert - timerStartInsert);
+        System.out.println("Время выполнения кода в нс: " + timerInsert);
+
+        long[] arrayComparison = {timerSort, timerBurble, timerChoiche, timerInsert};
+        Arrays.sort(arrayComparison);
+        System.out.println(Arrays.toString(arrayComparison));
+
     }
 
 
