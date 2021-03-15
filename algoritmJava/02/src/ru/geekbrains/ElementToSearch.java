@@ -13,20 +13,21 @@ public class ElementToSearch {
         }
         return "Элемент не найден";
     }
-    static  String binaryFind(int arr[], int elementsToFind){
+
+    static String binaryFind(int arr[], int elementsToFind) {
 
         Arrays.sort(arr);
         int firstIndex = arr[0];
         int lastIndex = arr.length - 1;
-        while (firstIndex <= lastIndex){
-            int middleIndex = (firstIndex + lastIndex)/2;
-            if(arr[middleIndex] == elementsToFind){
+        while (firstIndex <= lastIndex) {
+            int middleIndex = (firstIndex + lastIndex) / 2;
+            if (arr[middleIndex] == elementsToFind) {
                 return "Индекс искомого элемента:" + middleIndex;
             } else if (arr[middleIndex] < elementsToFind) {
                 firstIndex = middleIndex + 1;
-            }else if(arr[middleIndex] > elementsToFind){
-                    lastIndex = middleIndex - 1;
-                }
+            } else if (arr[middleIndex] > elementsToFind) {
+                lastIndex = middleIndex - 1;
+            }
         }
         return "искомый элемент не найден";
     }
