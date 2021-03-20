@@ -10,7 +10,7 @@ public class Timer {
         return timerEnd;
     }
     public static void timer(){
-        System.out.println(timerEnd() );
+        System.out.println(timerEnd());
         System.out.println(timerStart());
         long timeRun = timerStart() - timerEnd();
         System.out.println("Время выполнения кода: " + timeRun);

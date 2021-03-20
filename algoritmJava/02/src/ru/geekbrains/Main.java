@@ -13,9 +13,10 @@ import static ru.geekbrains.InsertSortArray.inserSortArray;
 import static ru.geekbrains.Timer.*;
 
 public class Main {
+    static long timerStart;
+    static long timeRun;
 
-    public static void main(String[] args) {
-        long timerStart = System.nanoTime();
+    public static void main(String[] args){
         int[] arrays = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
         int[] arraysCopy;
 
@@ -23,23 +24,24 @@ public class Main {
         for (int i = 0; i < arrays.length; i++) {
             // arrays[i] = rand.nextInt(20);
         }
+        timerStart =  System.nanoTime();
         arraysCopy = Arrays.copyOf(arrays, arrays.length);
-
         System.out.println("Вывод адреса массива " + arrays.toString());
         System.out.println("Вывод содержимого оригинального массива: " + Arrays.toString(arrays));
         System.out.println("Вывод содержимого скопированного массива: " + Arrays.toString(arraysCopy));
         System.out.println("Сравнение массивов " + Arrays.equals(arrays, arraysCopy));
-        long timerEnd = System.nanoTime();
-        long timer = (timerEnd - timerStart) / 1000000;
-        System.out.println("Время выполнения кода в мс: " + timer);
+        timeRun = System.nanoTime() - timerStart;;
+        System.out.println("Время выполнения кода  составляет: " + timeRun + " нс");
 
 
-        long timerStart2 = System.nanoTime();
+        timerStart =  System.nanoTime();
         System.out.println(linerFind(arrays, 3));
+        timeRun = System.nanoTime() - timerStart;;
+        System.out.println("Время выполнения линейного поиска  составляет: " + timeRun + " нс");
+        timerStart =  System.nanoTime();
         System.out.println(binaryFind(arrays, 3));
-        long timerEnd2 = System.nanoTime();
-        long timer2 = (timerEnd2 - timerStart2) / 1000000;
-        System.out.println("Время выполнения кода в мс: " + timer2);
+        timeRun = System.nanoTime() - timerStart;;
+        System.out.println("Время выполнения двоичного поиска  составляет: " + timeRun + " нс");
 
         int[] arrays400Elements = new int[400];
         int[] arrays400ElementsCopy;
