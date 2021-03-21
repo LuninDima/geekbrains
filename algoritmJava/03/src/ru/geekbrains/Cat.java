@@ -1,6 +1,5 @@
 package ru.geekbrains;
 
-import java.sql.SQLOutput;
 
 public class Cat {
     private String name;
