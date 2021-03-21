@@ -134,7 +134,7 @@ public class Main {
                 number.info();
             }
             timerRun = System.nanoTime() - timerStart;
-            System.out.println("Время выполнения кода: " + timerRun);
+            System.out.println("Время выполнения кода:  " + timerRun);
 
     }
 
