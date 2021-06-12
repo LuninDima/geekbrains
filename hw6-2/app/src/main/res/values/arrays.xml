@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="nameNotes">
+        <item>Заметка1</item>
+        <item>Заметка2</item>
+        <item>Заметка3</item>
+        <item>Заметка4</item>
+        <item>Заметка5</item>
+    </string-array>
+    <string-array name="dateNotes">
+        <item>Дата1</item>
+        <item>Дата2</item>
+        <item>Дата3</item>
+        <item>Дата4</item>
+        <item>Дата5</item>
+    </string-array>
+    <string-array name="descriptionNotes">
+        <item>Описание1</item>
+        <item>Описание2</item>
+        <item>Описание3</item>
+        <item>Описание4</item>
+        <item>Описание5</item>
+    </string-array>
+    <string-array name="textNotes">
+        <item>текст1</item>
+        <item>текст2</item>
+        <item>текст3</item>
+        <item>текст4</item>
+        <item>текст5</item>
+    </string-array>
+</resources>
